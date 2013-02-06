@@ -33,7 +33,11 @@ public class GUI {
         
         Container holder = gui.getContentPane();
         
-        Container top = new Container();
+        JPanel top = new JPanel();
+        
+        top.setBackground(Color.GRAY);
+        
+        top.setLayout(new FlowLayout());
         
         roomName = new JLabel("Current Room : ", SwingConstants.CENTER);
         
@@ -45,7 +49,13 @@ public class GUI {
         
         holder.add(new JLabel("Text Middle", SwingConstants.CENTER), BorderLayout.CENTER);
         
-        holder.add(top, BorderLayout.NORTH);
+        holder.add(top, BorderLayout.CENTER);
+        
+        JTextPane inputArea = new JTextPane();
+        
+        inputArea.setBackground(Color.LIGHT_GRAY);
+        
+        holder.add(inputArea, BorderLayout.SOUTH);
         
         gui.setVisible(true);
         
